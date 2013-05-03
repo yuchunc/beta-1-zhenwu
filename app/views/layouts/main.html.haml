@@ -17,7 +17,9 @@
       .row
         .leftcolumn.span3
           = render 'layouts/leftcolumn'
-        .span9
-          = yield
-    =render 'layouts/footer'
+        .mainbody.span9
+          .well= yield
+      .row
+        .footer.span12
+          .well= render 'layouts/footer'
 

@@ -1,6 +1,15 @@
 Zhenwu::Application.routes.draw do
 
+  devise_for :memebers
+
   root :to => "application#homepage"
+
+  get 'clips' => 'application#clips'
+
+  get 'fees' => 'application#fees'
+
+  get 'schedule' => 'application#schedule'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

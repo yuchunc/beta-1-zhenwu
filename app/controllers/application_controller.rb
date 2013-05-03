@@ -4,7 +4,15 @@ class ApplicationController < ActionController::Base
   layout 'main'
 
   def homepage
+  end
 
+  def clips
+  end
+
+  def fees
+  end
+
+  def schedule
   end
 
 end
