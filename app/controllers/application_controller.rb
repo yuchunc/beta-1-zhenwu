@@ -6,7 +6,8 @@ class ApplicationController < ActionController::Base
   def homepage
   end
 
-  def clips
+  def videos
+   @video = Video.all
   end
 
   def fees

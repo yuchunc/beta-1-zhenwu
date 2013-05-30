@@ -8,3 +8,7 @@
 
 Memeber.delete_all
 Memeber.create!(email: "test@test.com", password: "123456")
+
+Video.delete_all
+Video.create!(title: "test_public", description: "This is a public video.", yt_video_id: "z63fX6nYrrI")
+Video.create!(title: "test_private", description: "This is a private video.", yt_video_id: "Z-5JYBNFkUw")
