@@ -14,5 +14,8 @@
 /log/*.log
 /tmp
 
-# Ignore the database.yml from config
+# Ignore database.yml
 /config/database.yml
+
+# Ignore youtube_it.yml
+/config/youtube_it.yml
