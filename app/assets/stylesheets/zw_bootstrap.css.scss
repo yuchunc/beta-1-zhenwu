@@ -1,8 +1,6 @@
 @import 'twitter/bootstrap';
 
 .leftcolumn {
-
-  /*background: $black;*/
   min-height: 400px;
 
   .logo {
@@ -11,7 +9,6 @@
     text-align: center;
     width: 150px;
     height: 150px;
-    /*background: $white;*/
   }
 
   .menu {
@@ -19,15 +16,19 @@
     width: 150px;
     margin: 10px auto 0px auto;
   }
-
 }
 
 .mainbody {
-
   margin-top: 160px;
   min-height: 400px;
 
+  .notification {
+    line-height: auto;
+    height: 0;
+  }
+
 }
+
 
 .footer {
   height: 200px;
