@@ -6,6 +6,8 @@ Zhenwu::Application.routes.draw do
 
   get 'videos' => 'application#videos'
 
+  get 'video/:id' => 'application#video', as: 'video'
+
   get 'fees' => 'application#fees'
 
   get 'schedule' => 'application#schedule'

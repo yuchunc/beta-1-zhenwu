@@ -7,7 +7,7 @@
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-    width: 150px;
+    width: 200px;
     height: 150px;
   }
 
@@ -26,9 +26,23 @@
     line-height: auto;
     height: 0;
   }
-
 }
 
+.video_list {
+
+  .well {
+    min-height: 130px;
+  }
+
+  .thumbnail {
+    float: left;
+  }
+
+  .meat {
+    padding-left: 160px;
+  }
+
+}
 
 .footer {
   height: 200px;
