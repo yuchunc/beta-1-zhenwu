@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130503141817) do
+ActiveRecord::Schema.define(:version => 20130530020516) do
 
   create_table "memebers", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
@@ -30,5 +30,13 @@ ActiveRecord::Schema.define(:version => 20130503141817) do
 
   add_index "memebers", ["email"], :name => "index_memebers_on_email", :unique => true
   add_index "memebers", ["reset_password_token"], :name => "index_memebers_on_reset_password_token", :unique => true
+
+  create_table "videos", :force => true do |t|
+    t.string   "title"
+    t.string   "description"
+    t.string   "yt_video_id"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
 
 end

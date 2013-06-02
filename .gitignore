@@ -13,3 +13,9 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+
+# Ignore database.yml
+/config/database.yml
+
+# Ignore youtube_it.yml
+/config/youtube_it.yml

@@ -4,7 +4,9 @@ Zhenwu::Application.routes.draw do
 
   root :to => "application#homepage"
 
-  get 'clips' => 'application#clips'
+  get 'videos' => 'application#videos'
+
+  get 'video/:id' => 'application#video', as: 'video'
 
   get 'fees' => 'application#fees'
 

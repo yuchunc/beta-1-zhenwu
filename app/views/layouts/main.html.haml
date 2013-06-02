@@ -18,7 +18,9 @@
         .leftcolumn.span3
           = render 'layouts/leftcolumn'
         .mainbody.span9
-          .well= yield
+          -#%p.alert= alert
+            %p.notice= notice
+          = yield
       .row
         .footer.span12
           .well= render 'layouts/footer'

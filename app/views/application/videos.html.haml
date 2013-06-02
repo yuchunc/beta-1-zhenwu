@@ -1,0 +1,8 @@
+.video_list
+  - @video.each do |vid|
+    .well
+      .thumbnail
+        = link_to image_tag( 'http://img.youtube.com/vi/' + vid.yt_video_id + '/default.jpg'), video_path(vid.id)
+      .meat
+        %h3= link_to vid.title, video_path(vid.id)
+        = vid.description
