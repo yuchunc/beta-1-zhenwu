@@ -18,8 +18,10 @@
         .leftcolumn.span3
           = render 'layouts/leftcolumn'
         .mainbody.span9
-          -#%p.alert= alert
-            %p.notice= notice
+          - [:notice, :error, :alert].each do |level|
+            - unless flash[level].blank?
+              %div{ :class => "alert #{flash_class(level)}"}= content_tag :p, flash[level]
+
           = yield
       .row
         .footer.span12
