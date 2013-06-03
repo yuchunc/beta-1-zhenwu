@@ -59,13 +59,27 @@ Zhenwu::Application.routes.draw do
   #     resources :products
   #   end
 
-  # You can have the root of your site routed with "root"
-  # just remember to delete public/index.html.
-  # root :to => 'welcome#index'
-
-  # See how all your routes lay out with "rake routes"
-
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id))(.:format)'
 end
+#== Route Map
+# Generated on 03 Jun 2013 20:36
+#
+#             memeber_session POST   /memebers/sign_in(.:format)       devise/sessions#create
+#     destroy_memeber_session DELETE /memebers/sign_out(.:format)      devise/sessions#destroy
+#            memeber_password POST   /memebers/password(.:format)      devise/passwords#create
+#        new_memeber_password GET    /memebers/password/new(.:format)  devise/passwords#new
+#       edit_memeber_password GET    /memebers/password/edit(.:format) devise/passwords#edit
+#                             PUT    /memebers/password(.:format)      devise/passwords#update
+# cancel_memeber_registration GET    /memebers/cancel(.:format)        devise/registrations#cancel
+#        memeber_registration POST   /memebers(.:format)               devise/registrations#create
+#    new_memeber_registration GET    /memebers/sign_up(.:format)       devise/registrations#new
+#   edit_memeber_registration GET    /memebers/edit(.:format)          devise/registrations#edit
+#                             PUT    /memebers(.:format)               devise/registrations#update
+#                             DELETE /memebers(.:format)               devise/registrations#destroy
+#                        root        /                                 application#homepage
+#                      videos GET    /videos(.:format)                 application#videos
+#                       video GET    /video/:id(.:format)              application#video
+#                        fees GET    /fees(.:format)                   application#fees
+#                    schedule GET    /schedule(.:format)               application#schedule
