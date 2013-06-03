@@ -1,11 +1,11 @@
 common: &common
-  dev_key: "AI39si44pruXPfDdPYBwUmiMO-kYq2oDrIeDe29zEC8TnpVz0Hl8vRIjg26xYYuhyvhrmlGjJ4dYIjsvKNK6k2YN9amRqYum4Q"
-  username: "yuchunc.test"
-  password: ""
+  dev_key: "AI39si44pruXPfDdPYBwUmiMO-kYq2oDrIeDe29zEC8TnpVz0Hl8vRIjg26xYYuhyvhrmlGjJ4dYIjsvKNK6k2YN9amRqYum4Q"
+  username: "yuchunc.test"
+  password: ""
 
 test:
-  <<: *common
+  <<: *common
 development:
-  <<: *common
+  <<: *common
 production:
-  <<: *common
+  <<: *common
