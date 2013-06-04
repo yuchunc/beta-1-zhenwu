@@ -6,8 +6,9 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-Memeber.delete_all
-Memeber.create!(email: "test@test.com", password: "123456")
+Member.delete_all
+Member.create!(email: "test@test.com", password: "123456")
+Member.create!(email: "admin@admin.com", password: "123456", is_admin: true)
 
 Video.delete_all
 Video.create!(title: "test_public", description: "This is a public video.", yt_video_id: "z63fX6nYrrI")

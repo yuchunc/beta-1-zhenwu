@@ -25,4 +25,9 @@ class Video < ActiveRecord::Base
                                          )
   end
 
+  def self.delete_video(video)
+    yt_session.video_delete(video.yt_video_id)
+    video.destroy
+  end
+
 end

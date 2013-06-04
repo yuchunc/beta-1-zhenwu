@@ -1,6 +1,6 @@
 Zhenwu::Application.routes.draw do
 
-  devise_for :memebers
+  devise_for :members
 
   root :to => "application#homepage"
 
@@ -11,6 +11,15 @@ Zhenwu::Application.routes.draw do
   get 'fees' => 'application#fees'
 
   get 'schedule' => 'application#schedule'
+
+  namespace :admin do
+    get '/' => 'admin#dashboard'
+
+    resource :videos
+
+  end
+
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

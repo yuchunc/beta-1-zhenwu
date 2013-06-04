@@ -17,7 +17,7 @@
 #  updated_at             :datetime         not null
 #
 
-class Memeber < ActiveRecord::Base
+class Member < ActiveRecord::Base
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable,
   # :lockable, :timeoutable and :omniauthable
