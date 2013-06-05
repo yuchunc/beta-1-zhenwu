@@ -1,15 +1,18 @@
 .logo
   %h1= link_to '真武會館', root_path
 
-.well
-  .ul.nav.nav-list
-    - if memeber_signed_in?
-      .li= "#{current_memeber.email}已登錄。"
+- if member_signed_in? && current_member.is_admin?
+  .well
+    .ul.nav.nav-list
+      .li= current_member.email
+      .li= link_to '影片管理', admin_videos_path
       .li
-        不是你？
-        = link_to "登出", destroy_memeber_session_path, method: :delete
-    - else
-      .li= link_to "登錄", new_memeber_session_path
+        -# 不是你？
+        = link_to "登出", destroy_member_session_path, method: :delete
+-# else
+  .well
+    .ul.nav.nav-list
+      .li= link_to "登錄", new_member_session_path
 
 .well
   .ul.nav.nav-list

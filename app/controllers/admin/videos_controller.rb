@@ -1,7 +1,7 @@
-class Admin::VideoController < AdminController
+class Admin::VideosController < AdminController
 
   def index
-    @video = Video.all
+    @videos = Video.all
   end
 
   def new

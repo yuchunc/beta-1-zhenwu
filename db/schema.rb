@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(:version => 20130604074923) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at",                                :null => false
     t.datetime "updated_at",                                :null => false
-    t.boolean  "is_admin",               :default => false
+    t.boolean  "admin",                  :default => false
   end
 
   add_index "members", ["email"], :name => "index_members_on_email", :unique => true
