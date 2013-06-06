@@ -12,6 +12,7 @@ class Admin::VideosController < AdminController
   end
 
   def show
+    @video = Video.find(params[:id])
   end
 
   def create
@@ -25,5 +26,6 @@ class Admin::VideosController < AdminController
   def destroy
     @video = Video.find(params[:id])
     Video.delete_video(@video)
+    redirect_to admin_videos_path
   end
 end

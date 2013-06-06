@@ -1,0 +1,4 @@
+=raw yt_client.my_video(@video.yt_video_id).embed_html_with_width(600)
+.buttons
+  = link_to iconblack('remove') + "刪除", admin_video_path(@video), method: :delete,
+    class: "btn btn-danger delete", data: { confirm: "確定刪除: #{@video.title}?" }
