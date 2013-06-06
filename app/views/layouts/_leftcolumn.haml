@@ -6,9 +6,8 @@
     .ul.nav.nav-list
       .li= current_member.email
       .li= link_to '影片管理', admin_videos_path
-      .li
-        -# 不是你？
-        = link_to "登出", destroy_member_session_path, method: :delete
+      .li= link_to '上傳影片', new_admin_video_path
+      .li= link_to "登出", destroy_member_session_path, method: :delete
 -# else
   .well
     .ul.nav.nav-list
