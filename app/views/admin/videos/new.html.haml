@@ -1,3 +1,23 @@
-.new_video
-  = form_for @video, html: { class: "form-horizontal" } do |vid|
+.new_video.span6
+  = form_for [:admin, @video], html: { class: "form-horizontal" } do |vid|
     .control-group
+      .control-label= '檔案名稱'
+      .controls
+        = vid.file_field :video
+
+    .control-group
+      .control-label= '主題'
+      .controls
+        = vid.text_field :title
+
+    .control-group
+      .control-label= '簡介'
+      .controls
+        = vid.text_area :description, rows: 5
+
+    .control-group
+      .controls
+        .pull-right= link_to '取消', admin_videos_path, class: 'btn btn-danger'
+        = vid.submit '儲存', class: 'btn btn-success'
+
+
