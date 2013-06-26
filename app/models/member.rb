@@ -1,6 +1,6 @@
 # == Schema Information
 #
-# Table name: memebers
+# Table name: members
 #
 #  id                     :integer          not null, primary key
 #  email                  :string(255)      default(""), not null
@@ -15,6 +15,7 @@
 #  last_sign_in_ip        :string(255)
 #  created_at             :datetime         not null
 #  updated_at             :datetime         not null
+#  admin                  :boolean          default(FALSE)
 #
 
 class Member < ActiveRecord::Base

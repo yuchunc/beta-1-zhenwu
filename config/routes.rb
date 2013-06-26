@@ -15,7 +15,14 @@ Zhenwu::Application.routes.draw do
   namespace :admin do
     get '/' => 'admin#dashboard'
 
-    resources :videos
+    resources :videos do
+
+      new do
+        post :upload
+        get :save_video
+      end
+
+    end
 
   end
 
