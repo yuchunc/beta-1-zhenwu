@@ -4,19 +4,11 @@ class Admin::VideosController < AdminController
     @videos = Video.all
   end
 
-  def new
-    @video = Video.new
-  end
-
   def edit
   end
 
   def show
     @video = Video.find(params[:id])
-  end
-
-  def create
-    Video.create(params[:videos])
   end
 
   def update
@@ -38,6 +30,17 @@ class Admin::VideosController < AdminController
         format.html { render "/admin/videos/new" }
       end
     end
+  end
+
+  def save_video
+    @video = Video.find(params[:video_id])
+      if params[:status].to_i == 200
+        @video.update_attributes(:yt_video_id => params[:id].to_s, :is_complete => true)
+        Video.delete_incomplete_videos
+      else
+        Video.delete_video(@video)
+      end
+    redirect_to videos_path, :notice => "video successfully uploaded"
   end
 
 end

@@ -1,5 +1,5 @@
 .new_video.span6
-  = form_for [:admin, @video], html: { class: "form-horizontal" } do |vid|
+  = form_for :video, url: upload_new_admin_video_path, html: { class: "form-horizontal" } do |vid|
     .control-group
       .control-label= '檔案名稱'
       .controls

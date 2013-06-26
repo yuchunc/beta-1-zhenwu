@@ -80,22 +80,32 @@ Zhenwu::Application.routes.draw do
   # match ':controller(/:action(/:id))(.:format)'
 end
 #== Route Map
-# Generated on 03 Jun 2013 20:36
+# Generated on 26 Jun 2013 22:41
 #
-#             memeber_session POST   /memebers/sign_in(.:format)       devise/sessions#create
-#     destroy_memeber_session DELETE /memebers/sign_out(.:format)      devise/sessions#destroy
-#            memeber_password POST   /memebers/password(.:format)      devise/passwords#create
-#        new_memeber_password GET    /memebers/password/new(.:format)  devise/passwords#new
-#       edit_memeber_password GET    /memebers/password/edit(.:format) devise/passwords#edit
-#                             PUT    /memebers/password(.:format)      devise/passwords#update
-# cancel_memeber_registration GET    /memebers/cancel(.:format)        devise/registrations#cancel
-#        memeber_registration POST   /memebers(.:format)               devise/registrations#create
-#    new_memeber_registration GET    /memebers/sign_up(.:format)       devise/registrations#new
-#   edit_memeber_registration GET    /memebers/edit(.:format)          devise/registrations#edit
-#                             PUT    /memebers(.:format)               devise/registrations#update
-#                             DELETE /memebers(.:format)               devise/registrations#destroy
-#                        root        /                                 application#homepage
-#                      videos GET    /videos(.:format)                 application#videos
-#                       video GET    /video/:id(.:format)              application#video
-#                        fees GET    /fees(.:format)                   application#fees
-#                    schedule GET    /schedule(.:format)               application#schedule
+#             member_session POST   /members/sign_in(.:format)             devise/sessions#create
+#     destroy_member_session DELETE /members/sign_out(.:format)            devise/sessions#destroy
+#            member_password POST   /members/password(.:format)            devise/passwords#create
+#        new_member_password GET    /members/password/new(.:format)        devise/passwords#new
+#       edit_member_password GET    /members/password/edit(.:format)       devise/passwords#edit
+#                            PUT    /members/password(.:format)            devise/passwords#update
+# cancel_member_registration GET    /members/cancel(.:format)              devise/registrations#cancel
+#        member_registration POST   /members(.:format)                     devise/registrations#create
+#    new_member_registration GET    /members/sign_up(.:format)             devise/registrations#new
+#   edit_member_registration GET    /members/edit(.:format)                devise/registrations#edit
+#                            PUT    /members(.:format)                     devise/registrations#update
+#                            DELETE /members(.:format)                     devise/registrations#destroy
+#                       root        /                                      application#homepage
+#                     videos GET    /videos(.:format)                      application#videos
+#                      video GET    /video/:id(.:format)                   application#video
+#                       fees GET    /fees(.:format)                        application#fees
+#                   schedule GET    /schedule(.:format)                    application#schedule
+#                      admin GET    /admin(.:format)                       admin/admin#dashboard
+#     upload_new_admin_video POST   /admin/videos/new/upload(.:format)     admin/videos#upload
+# save_video_new_admin_video GET    /admin/videos/new/save_video(.:format) admin/videos#save_video
+#               admin_videos GET    /admin/videos(.:format)                admin/videos#index
+#                            POST   /admin/videos(.:format)                admin/videos#create
+#            new_admin_video GET    /admin/videos/new(.:format)            admin/videos#new
+#           edit_admin_video GET    /admin/videos/:id/edit(.:format)       admin/videos#edit
+#                admin_video GET    /admin/videos/:id(.:format)            admin/videos#show
+#                            PUT    /admin/videos/:id(.:format)            admin/videos#update
+#                            DELETE /admin/videos/:id(.:format)            admin/videos#destroy
