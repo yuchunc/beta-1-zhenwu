@@ -3,8 +3,6 @@ class ApplicationController < ActionController::Base
 
   layout 'main'
 
-  helper_method :yt_client
-
   def homepage
   end
 
