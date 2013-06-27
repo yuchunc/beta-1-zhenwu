@@ -48,4 +48,14 @@ class Video < ActiveRecord::Base
     yt_session.upload_token(video_options(params), nexturl)
   end
 
+  private
+
+    def self.video_options(params)
+      opt = { title: params[:title],
+              description: params[:description],
+              category: "Sports",
+              keywords: ["test"]
+            }
+    end
+
 end

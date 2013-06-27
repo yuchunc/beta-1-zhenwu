@@ -1,0 +1,7 @@
+.upload.span6
+  %h3 Step 2: 檔案上傳
+  = form_tag @upload_info[:url], multipart: true do
+    = hidden_field_tag :token, @upload_info[:token]
+    = label_tag "檔案"
+    = file_field_tag :file
+    = submit_tag "上傳"

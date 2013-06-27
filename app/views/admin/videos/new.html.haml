@@ -1,10 +1,6 @@
 .new_video.span6
+  %h3 Step 1: 影片資訊"
   = form_for :video, url: upload_new_admin_video_path, html: { class: "form-horizontal" } do |vid|
-    .control-group
-      .control-label= '檔案名稱'
-      .controls
-        = vid.file_field :video
-
     .control-group
       .control-label= '主題'
       .controls
@@ -18,6 +14,6 @@
     .control-group
       .controls
         .pull-right= link_to '取消', admin_videos_path, class: 'btn btn-danger'
-        = vid.submit '儲存', class: 'btn btn-success'
+        = vid.submit '下一步', class: 'btn btn-success'
 
 

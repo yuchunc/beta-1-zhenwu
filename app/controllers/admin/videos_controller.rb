@@ -24,7 +24,7 @@ class Admin::VideosController < AdminController
   def upload
     @video = Video.create(params[:video])
     if @video
-      @upload_info = Video.token_form(params[:video], save_video_new_video_url(:video_id => @video.id))
+      @upload_info = Video.token_form(params[:video], save_video_new_admin_video_url(:video_id => @video.id))
     else
       respond_to do |format|
         format.html { render "/admin/videos/new" }
