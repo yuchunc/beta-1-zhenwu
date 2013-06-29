@@ -27,6 +27,7 @@ end
 
 group :development do
   gem 'annotate'
+  gem 'debugger'
 end
 
 group :test, :development do
