@@ -9,8 +9,7 @@ gem 'sqlite3'
 gem 'haml'
 gem 'devise'
 gem 'youtube_it'
-
-gem 'youtube_it'
+gem 'jquery-rails'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -33,7 +32,10 @@ group :test, :development do
   gem 'minitest-rails'
 end
 
-gem 'jquery-rails'
+group :development, :production do
+  gem 'mysql2'
+end
+
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
