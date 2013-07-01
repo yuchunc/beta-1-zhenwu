@@ -1,7 +1,7 @@
 class Admin::VideosController < AdminController
 
   def index
-    @videos = Video.all
+    @videos = Video.completes
   end
 
   def edit

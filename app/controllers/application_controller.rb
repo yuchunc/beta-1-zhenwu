@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
   end
 
   def videos
-    @video = Video.all
+    @videos = Video.completes
   end
 
   def video

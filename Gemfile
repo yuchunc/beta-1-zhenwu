@@ -6,6 +6,7 @@ gem 'rails', '3.2.13'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3'
+gem 'pg'
 gem 'haml'
 gem 'devise'
 gem 'youtube_it'
@@ -26,16 +27,12 @@ end
 
 group :development do
   gem 'annotate'
+  gem 'debugger'
 end
 
 group :test, :development do
   gem 'minitest-rails'
 end
-
-group :development, :production do
-  gem 'mysql2'
-end
-
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
